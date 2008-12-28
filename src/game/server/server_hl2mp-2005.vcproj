@@ -28,8 +28,8 @@
 			<Tool
 				Name="VCCustomBuildTool"
 				Description="Copying to destination folder"
-				CommandLine="if exist &quot;c:\program files\steam\steamapps\SourceMods\sourcecode\bin\server.dll&quot; attrib -r &quot;c:\program files\steam\steamapps\SourceMods\sourcecode\bin\server.dll&quot;&#x0D;&#x0A;if exist &quot;$(TargetDir)&quot;server.dll copy &quot;$(TargetDir)&quot;server.dll &quot;c:\program files\steam\steamapps\SourceMods\sourcecode\bin\server.dll&quot;&#x0D;&#x0A;"
-				Outputs="c:\program files\steam\steamapps\SourceMods\sourcecode\bin\server.dll"
+				CommandLine="if exist &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\server.dll&quot; attrib -r &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\server.dll&quot;&#x0D;&#x0A;if exist &quot;$(TargetDir)&quot;server.dll copy &quot;$(TargetDir)&quot;server.dll &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\server.dll&quot;&#x0D;&#x0A;if exist &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\server.pdb&quot; attrib -r &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\server.pdb&quot;&#x0D;&#x0A;if exist &quot;$(TargetDir)&quot;server.pdb copy &quot;$(TargetDir)&quot;server.pdb &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin&quot;&#x0D;&#x0A;"
+				Outputs="&quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\server.dll&quot;;&quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\server.pdb&quot;"
 			/>
 			<Tool
 				Name="VCXMLDataGeneratorTool"
@@ -63,7 +63,7 @@
 				BrowseInformation="0"
 				BrowseInformationFile="$(IntDir)/"
 				WarningLevel="4"
-				Detect64BitPortabilityProblems="true"
+				Detect64BitPortabilityProblems="false"
 				DebugInformationFormat="4"
 				CompileAs="2"
 				ErrorReporting="1"
@@ -83,7 +83,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				UseUnicodeResponseFiles="false"
-				AdditionalDependencies=" winmm.lib"
+				AdditionalDependencies="winmm.lib user32.lib"
 				ShowProgress="0"
 				OutputFile="$(OutDir)/Server.dll"
 				LinkIncremental="2"

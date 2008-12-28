@@ -28,8 +28,8 @@
 			<Tool
 				Name="VCCustomBuildTool"
 				Description="Copying to destination folder"
-				CommandLine="if exist &quot;c:\program files\steam\steamapps\SourceMods\sourcecode\bin\client.dll&quot; attrib -r &quot;c:\program files\steam\steamapps\SourceMods\sourcecode\bin\client.dll&quot;&#x0D;&#x0A;copy &quot;$(TargetDir)&quot;client.dll &quot;c:\program files\steam\steamapps\SourceMods\sourcecode\bin&quot;&#x0D;&#x0A;"
-				Outputs="c:\program files\steam\steamapps\SourceMods\sourcecode\bin\client.dll"
+				CommandLine="if exist &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\client.dll&quot; attrib -r &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\client.dll&quot;&#x0D;&#x0A;if exist &quot;$(TargetDir)&quot;client.dll copy &quot;$(TargetDir)&quot;client.dll &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\client.dll&quot;&#x0D;&#x0A;if exist &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\client.pdb&quot; attrib -r &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\client.pdb&quot;&#x0D;&#x0A;if exist &quot;$(TargetDir)&quot;client.pdb copy &quot;$(TargetDir)&quot;client.pdb &quot;c:\program files\steam\steamapps\SourceMods\Impending\bin&quot;&#x0D;&#x0A;"
+				Outputs="&quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\client.dll&quot;;&quot;c:\program files\steam\steamapps\SourceMods\Impending\bin\client.pdb&quot;"
 			/>
 			<Tool
 				Name="VCXMLDataGeneratorTool"
@@ -64,7 +64,7 @@
 				BrowseInformation="0"
 				BrowseInformationFile="$(IntDir)/"
 				WarningLevel="4"
-				Detect64BitPortabilityProblems="true"
+				Detect64BitPortabilityProblems="false"
 				DebugInformationFormat="4"
 				CompileAs="2"
 				ErrorReporting="1"
@@ -85,7 +85,7 @@
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
 				UseUnicodeResponseFiles="false"
-				AdditionalDependencies="winmm.lib"
+				AdditionalDependencies="winmm.lib user32.lib"
 				ShowProgress="0"
 				OutputFile="$(OutDir)/Client.dll"
 				LinkIncremental="2"
